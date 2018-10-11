@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stylist_listing_id: 1
+  time: MyString
+  date: MyString
+  booked: false
+
+two:
+  stylist_listing_id: 1
+  time: MyString
+  date: MyString
+  booked: false
