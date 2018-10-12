@@ -4,5 +4,4 @@ class Availability < ApplicationRecord
 
   validates :time, presence: true
   validates :date, presence: true
-  validates :booked, presence: true
 end
