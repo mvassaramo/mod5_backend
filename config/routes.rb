@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:index]
-      resources :stylist_listings, only: [:index]
-      resources :requests, only: [:index]
-      resources :availabilities, only: [:index]
-
+      resources :users, only: [:index, :show]
+      resources :stylist_listings, only: [:index, :show]
+      resources :requests, only: [:index, :show]
+      resources :availabilities, only: [:index, :show]
+      resources :services, only: [:index]
+      resources :bookings, only: [:index, :show]
+      resources :customer_bookings, only: [:index, :show]
     end
   end
 end
