@@ -2,6 +2,8 @@ class CreateRequests < ActiveRecord::Migration[5.2]
   def change
     create_table :requests do |t|
       t.integer :user_id
+      t.string :first_name
+      t.string  :last_name
       t.string :title
       t.string :description
       t.string :date

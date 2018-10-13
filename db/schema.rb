@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2018_10_11_153646) do
 
   create_table "requests", force: :cascade do |t|
     t.integer "user_id"
+    t.string "first_name"
+    t.string "last_name"
     t.string "title"
     t.string "description"
     t.string "date"

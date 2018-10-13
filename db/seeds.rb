@@ -22,9 +22,9 @@ service2 = Service.create(stylist_listing_id: stylist1.id, name: "MUA")
 availability1 = Availability.create(stylist_listing_id: stylist1.id, time: "12pm", date: "12 Nov", booked: false)
 availability2 = Availability.create(stylist_listing_id: stylist2.id, time: "3pm", date: "12 Nov", booked: false)
 
-request1 = Request.create(user_id: jess.id, title: "looking for...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
-request2 = Request.create(user_id: jess.id, title: "looking for another..", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
-request3 = Request.create(user_id: maduri.id, title: "looking for...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
+request1 = Request.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, title: "looking for...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
+request2 = Request.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, title: "looking for another..", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
+request3 = Request.create(user_id: maduri.id, first_name: maduri.first_name, last_name: maduri.last_name, title: "looking for stylist...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
 
 customerbooking1 = CustomerBooking.create(user_id: natalie.id)
 customerbooking2 = CustomerBooking.create(user_id: sarah.id)
