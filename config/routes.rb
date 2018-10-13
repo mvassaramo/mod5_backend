@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show]
       resources :stylist_listings, only: [:index, :show]
-      resources :requests, only: [:index, :show]
+      resources :requests, only: [:index, :show, :new, :create]
       resources :availabilities, only: [:index, :show]
       resources :services, only: [:index]
       resources :bookings, only: [:index, :show]
