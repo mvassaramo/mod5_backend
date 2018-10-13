@@ -13,8 +13,8 @@ natalie = User.create(first_name: "Natalie", last_name: "Reid", email: "natalie@
 jess = User.create(first_name: "Jess", last_name: "T", email: "jess@email.com", contact_number: "071224567811", profile_image: "image placeholder")
 sarah = User.create(first_name: "Sarah", last_name: "J", email: "sarah@email.com", contact_number: "071224567811", profile_image: "image placeholder")
 
-stylist1 = StylistListing.create(user_id: maduri.id, rating: "5", area: "London")
-stylist2 = StylistListing.create(user_id: jess.id, rating: "5", area: "London")
+stylist1 = StylistListing.create(user_id: maduri.id, first_name: maduri.first_name, last_name: maduri.last_name, bio: "stlyist bio....", rating: "5", area: "London")
+stylist2 = StylistListing.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, bio: "stlyist bio....", rating: "5", area: "London")
 
 service1 = Service.create(stylist_listing_id: stylist1.id, name: "Hair Stylist")
 service2 = Service.create(stylist_listing_id: stylist1.id, name: "MUA")
