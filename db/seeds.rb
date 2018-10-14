@@ -19,8 +19,25 @@ stylist2 = StylistListing.create(user_id: jess.id, first_name: jess.first_name, 
 service1 = Service.create(stylist_listing_id: stylist1.id, name: "Hair Stylist")
 service2 = Service.create(stylist_listing_id: stylist1.id, name: "MUA")
 
-availability1 = Availability.create(stylist_listing_id: stylist1.id, time: "12pm", date: "12 Nov", booked: false)
-availability2 = Availability.create(stylist_listing_id: stylist2.id, time: "3pm", date: "12 Nov", booked: false)
+today = Date.today
+availabilities = []
+
+StylistListing.all.each do |stylist|
+  (0..6).to_a.each do |x|
+    availabilities.push({date: today + x, time: "09:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "10:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "11:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "13:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "14:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "15:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "16:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "17:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "18:00", stylist_listing: stylist, booked: false})
+    availabilities.push({date: today + x, time: "19:00", stylist_listing: stylist, booked: false})
+  end
+end
+
+availabilities.each {|availability_data| Availability.create(availability_data)}
 
 request1 = Request.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, title: "looking for...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
 request2 = Request.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, title: "looking for another..", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
@@ -29,8 +46,13 @@ request3 = Request.create(user_id: maduri.id, first_name: maduri.first_name, las
 customerbooking1 = CustomerBooking.create(user_id: natalie.id)
 customerbooking2 = CustomerBooking.create(user_id: sarah.id)
 
-booking1 = Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking1.id)
-booking2= Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking2.id)
-
-
 p "finished seeding"
+
+
+
+# availability1 = Availability.create(stylist_listing_id: stylist1.id, time: "12pm", date: "12 Nov", booked: false)
+# availability2 = Availability.create(stylist_listing_id: stylist2.id, time: "3pm", date: "12 Nov", booked: false)
+
+
+# booking1 = Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking1.id)
+# booking2= Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking2.id)

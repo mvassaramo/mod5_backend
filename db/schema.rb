@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_10_11_153646) do
   create_table "availabilities", force: :cascade do |t|
     t.integer "stylist_listing_id"
     t.string "time"
-    t.string "date"
+    t.date "date"
     t.boolean "booked"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -14,9 +14,25 @@ class Api::V1::RequestsController < ApplicationController
       end
   end
 
+  def update
+    @request = Request.find(params[:id])
+    @request.update(request_params)
+    if @request.save
+      render json: @request
+    else
+      render json: @request.errors
+    end
+  end
+
   def show
     @request = Request.find(params[:id])
     render json: @request
+  end
+
+  def delete
+    @request = Request.find(params[:id])
+    @request.destroy
+    render :index
   end
 
 

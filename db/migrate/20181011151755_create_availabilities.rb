@@ -3,7 +3,7 @@ class CreateAvailabilities < ActiveRecord::Migration[5.2]
     create_table :availabilities do |t|
       t.integer :stylist_listing_id
       t.string :time
-      t.string :date
+      t.date :date
       t.boolean :booked
 
       t.timestamps
