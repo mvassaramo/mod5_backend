@@ -4,4 +4,5 @@ class StylistListing < ApplicationRecord
   has_many :availabilities
 
   validates :area, presence: true
+
 end

@@ -10,11 +10,15 @@ class Api::V1::StylistListingsController < ApplicationController
     render json: @stylist_listing
   end
 
+  def get_availabilities
+    @stylist_listing = StylistListing.find(params[:stylist_listing_id])
+    render json: @stylist_listing.availabilities
+  end
 
   private
 
   def stylist_listing_params
-    params.require(:stylist_listing).permit(:user_id, :rating, :area)
+    params.require(:stylist_listing).permit(:user_id, :rating, :area, availabilities: [])
   end
 
 end

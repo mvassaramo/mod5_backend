@@ -3,7 +3,6 @@ StylistListing.destroy_all
 Service.destroy_all
 Availability.destroy_all
 Request.destroy_all
-CustomerBooking.destroy_all
 Booking.destroy_all
 
 p "started seeeding"
@@ -43,16 +42,7 @@ request1 = Request.create(user_id: jess.id, first_name: jess.first_name, last_na
 request2 = Request.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, title: "looking for another..", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
 request3 = Request.create(user_id: maduri.id, first_name: maduri.first_name, last_name: maduri.last_name, title: "looking for stylist...", description: "full description", date: "12 Nov 2018", time: "7am - 12pm", other_info: "n/a" )
 
-customerbooking1 = CustomerBooking.create(user_id: natalie.id)
-customerbooking2 = CustomerBooking.create(user_id: sarah.id)
 
+booking1 = Booking.create(user_id: maduri.id, availability_id: 73)
+booking2 = Booking.create(user_id: natalie.id, availability_id: 3)
 p "finished seeding"
-
-
-
-# availability1 = Availability.create(stylist_listing_id: stylist1.id, time: "12pm", date: "12 Nov", booked: false)
-# availability2 = Availability.create(stylist_listing_id: stylist2.id, time: "3pm", date: "12 Nov", booked: false)
-
-
-# booking1 = Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking1.id)
-# booking2= Booking.create(availability_id: availability1.id, customer_booking_id: customerbooking2.id)

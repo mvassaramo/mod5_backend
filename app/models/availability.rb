@@ -5,4 +5,7 @@ class Availability < ApplicationRecord
   validates :time, presence: true
   validates :date, presence: true
 
+  def booked
+    Booking.all.select {|b| b.availability == self}.length > 0
+  end
 end

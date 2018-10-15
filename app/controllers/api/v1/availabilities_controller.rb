@@ -10,6 +10,20 @@ class Api::V1::AvailabilitiesController < ApplicationController
     render json: @availability
   end
 
+  def edit
+    @availability = Availability.find(params[:id])
+  end
+
+  def update
+    @availability = Availability.find(params[:id])
+    @availability.update(availability_params)
+    if @availability.save
+      render json: @availability
+    else
+      render json: @availability.errors
+    end
+  end
+
   private
 
   def availability_params
