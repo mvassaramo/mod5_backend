@@ -20,7 +20,7 @@ class Api::V1::BookingsController < ApplicationController
       if @booking.save
         render json: @booking
       else
-        render json @booking.errors
+        render json: @booking.errors
       end
   end
 

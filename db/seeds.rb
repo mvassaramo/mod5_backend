@@ -10,13 +10,13 @@ p "started seeeding"
 maduri = User.create(first_name: "Maduri", last_name: "Vassaramo", email: "maduri@email.com", contact_number: "071234567811", profile_image: "image placeholder")
 natalie = User.create(first_name: "Natalie", last_name: "Reid", email: "natalie@email.com", contact_number: "071224567811", profile_image: "image placeholder")
 jess = User.create(first_name: "Jess", last_name: "T", email: "jess@email.com", contact_number: "071224567811", profile_image: "image placeholder")
-sarah = User.create(first_name: "Sarah", last_name: "J", email: "sarah@email.com", contact_number: "071224567811", profile_image: "image placeholder")
 
-stylist1 = StylistListing.create(user_id: maduri.id, first_name: maduri.first_name, last_name: maduri.last_name, bio: "stlyist bio....", rating: "5", area: "London")
-stylist2 = StylistListing.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, bio: "stlyist bio....", rating: "5", area: "London")
+stylist1 = StylistListing.create(user_id: maduri.id, first_name: maduri.first_name, last_name: maduri.last_name, bio: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.", rating: "5", area: "London")
+stylist2 = StylistListing.create(user_id: jess.id, first_name: jess.first_name, last_name: jess.last_name, bio: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.", rating: "5", area: "London")
 
 service1 = Service.create(stylist_listing_id: stylist1.id, name: "Hair Stylist")
 service2 = Service.create(stylist_listing_id: stylist1.id, name: "MUA")
+service3 = Service.create(stylist_listing_id: stylist2.id, name: "Hair Stylist")
 
 today = Date.today
 availabilities = []
