@@ -1,8 +1,7 @@
 class StylistListing < ApplicationRecord
   belongs_to :user
-  has_many :services
   has_many :availabilities
-
-  validates :area, presence: true
+  has_many :stylist_services
+  has_many :services, through: :stylist_services
 
 end

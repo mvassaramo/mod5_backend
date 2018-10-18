@@ -24,6 +24,20 @@ class Api::V1::BookingsController < ApplicationController
       end
   end
 
+  def get_info
+    booking = Booking.find(params[:booking_id])
+
+    info = {
+      'customer_name' => booking.user.name,
+      'customer_id' => booking.user.id,
+      'date' => booking.availability.date,
+      'time'=> booking.availability.time,
+      'stylist_name' => booking.availability.stylist_listing.user.name,
+      'stylist_id' => booking.availability.stylist_listing.user.id
+    }
+
+    render json: info.to_json
+  end
 
   private
 

@@ -1,5 +1,4 @@
 class Service < ApplicationRecord
-  belongs_to :stylist_listing
-
-  validates :name, presence: true
+  has_many :stylist_services
+  has_many :stylist_listings, through: :stylist_services
 end
