@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
     render json: @user
   end
 
-  def create
+  def signing
     @user = User.new(user_params)
       if @user.save
         render json: @user

@@ -4,8 +4,8 @@ class CreateStylistListings < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.string :first_name
       t.string :last_name
+      t.string :tagline
       t.string :bio
-      t.string :rating
       t.string :area
 
       t.timestamps

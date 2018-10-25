@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2018_10_18_125300) do
     t.integer "user_id"
     t.string "first_name"
     t.string "last_name"
+    t.string "tagline"
     t.string "bio"
-    t.string "rating"
     t.string "area"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
